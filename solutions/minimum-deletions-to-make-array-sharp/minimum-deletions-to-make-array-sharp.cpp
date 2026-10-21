@@ -1,13 +1,16 @@
 class Solution {
 public:
     int minDeletions(vector<int>& nums) {
-        int ans = 0;
-        int n = nums.size();
-        for(int i = 0; i<n-1; i++){
-            if(nums[i] == nums[i+1]){
-                ans++ ;
+        int cal;
+        int deletions = 0;
+        for(int i = 0; i< nums.size()-1; i++){
+            cal = nums[i] ^ nums[i + 1];
+            if(cal == 0){
+                nums.erase(nums.begin() + i);
+                deletions++ ;
+                i-- ;
             }
         }
-        return ans;
+        return deletions;
     }
 };
