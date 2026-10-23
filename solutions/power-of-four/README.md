@@ -3,6 +3,6 @@
 - Difficulty: Easy
 - LeetCode problem: https://leetcode.com/problems/power-of-four/
 - Language: cpp
-- Runtime: n/a
-- Memory: 7924000
+- Runtime: 1
+- Memory: 7648000
 - Solved: 2026-10-23
