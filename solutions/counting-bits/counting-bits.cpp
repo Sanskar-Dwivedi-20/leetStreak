@@ -1,16 +1,9 @@
 class Solution {
 public:
-    int help(int n) {
-        if (n==0)
-            return 0;
-        return (n%2+ help(n/2));
+    vector<int> countBits(int num) {
+        vector<int> ret(num+1, 0);
+        for (int i = 1; i <= num; ++i)
+            ret[i] = ret[i&(i-1)] + 1;
+        return ret;
     }
-    vector<int> countBits(int n) {
-        vector<int> ans;
-        for(int i= 0; i<=n; i++){
-            ans.push_back(help(i));
-        }
-    return ans;
-    }
-
 };
