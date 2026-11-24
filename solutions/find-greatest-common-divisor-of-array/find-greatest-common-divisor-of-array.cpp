@@ -15,10 +15,22 @@ public:
 
         // the above solution is a tle
 
-        // approach 2
+        // approach 2 - using gcd function
+        // int min = *min_element(nums.begin(), nums.end());
+        // int max = *max_element(nums.begin(), nums.end());
+
+        // return __gcd(min,max);
+
+
+        // approach 3 - euclidean algorithm 
         int min = *min_element(nums.begin(), nums.end());
         int max = *max_element(nums.begin(), nums.end());
 
-        return __gcd(min,max);
+        while(max != 0){
+            int rem = min % max;
+            min = max;
+            max = rem;
+        }
+        return min;
     }
 };
