@@ -3,6 +3,6 @@
 - Difficulty: Medium
 - LeetCode problem: https://leetcode.com/problems/count-total-number-of-colored-cells/
 - Language: cpp
-- Runtime: n/a
-- Memory: 7816000
+- Runtime: 1
+- Memory: 7828000
 - Solved: 2026-11-24
